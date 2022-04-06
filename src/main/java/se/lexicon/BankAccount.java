@@ -6,8 +6,10 @@ public class BankAccount {
   private double balance;
   private Customer customer;
 
-  public BankAccount(int accountNumber, Customer customer) {
-    this.accountNumber = accountNumber;
+  private static int sequencer = 0;
+
+  public BankAccount( Customer customer) {
+    this.accountNumber = ++sequencer;
     this.customer = customer;
   }
 
